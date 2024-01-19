@@ -1,0 +1,176 @@
+/* main.css */
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+        
+}
+
+main{
+    padding: 20px;
+    
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    font-size: larger;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 600px) {
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    input[type="text"], button {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+    }
+
+    input[type="text"] {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    button {
+        flex: 0 0 200px;
+    }
+}
+
+
+
+
+
+.body{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+.profile-container{
+    display:flex;
+    width: 100vh;
+    height: 100px;
+    padding: 20px;
+    margin:60px ;
+    gap:10px;
+    justify-content: center;align-items: center;
+}
+
+.profile-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px black;
+
+}
+
+.repos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:60px ;
+    gap:30px;
+}
+
+.repo{
+    border:1px solid ;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(46, 135, 236);
+
+}
+.repo h3{
+    color: rgb(0, 119, 255);
+}
+.repo p{
+    font-size: medium;
+    font-weight: 800;
+
+}
+.repo span{
+    padding: 3px ;
+    background-color: rgb(46, 135, 236);
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+/* Responsive Styles */
+@media screen and (min-width: 600px) {
+    .profile-container {
+        justify-content: space-between;
+    }
+
+    .user-info {
+        text-align: left;
+    }
+
+    .repos {
+        margin-top: 0;
+    }
+
+    .repo {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .profile-container {
+        flex-wrap: nowrap;
+    }
+
+    .user-info {
+        flex: 0 0 60%;
+        text-align: left;
+    }
+
+    .repos {
+        flex: 0 0 35%;
+        margin-top: 0;
+    }
+
+    .repo {
+        margin-bottom: 15px;
+    }
+}
+

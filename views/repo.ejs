@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    
+</head>
+<body>
+    <div class="profile-container">
+        
+        
+    <% if (UserData) { %>
+     
+
+        <img src="<%= UserData.profile.avatar_url %>" alt="User Profile" class="profile-image">
+        <div class="user-info">
+            <h2><%= UserData.profile.name%></h2>
+            <p><%= UserData.profile.bio || 'No bio available' %></p>
+            <p>Location: <%= UserData.profile.location || 'No Location Given'  %></p>
+            <p>Twitter:<%= UserData.profile.twitter_username %></p>    
+        </div>
+    </div>
+    
+    <br><br>
+
+    <h2 style="text-align: center;">Repositories</h2>
+    <div class="repos">
+        <% UserData.repos.forEach(function(repo) { %>
+        <div class="repo"> 
+        
+            <h3>Repository Name:<%= repo.name %></h3>
+            <p><%= repo.description || 'No description' %></p>
+            <h4>Language: <span> <%= repo.language %></span></h4>
+            
+        </div>
+        <% }) %>
+        <% } else { %>
+            <p>No user data available. Please enter a valid GitHub username.</p>
+        <% } %>
+    </div>
+</body>
+</html>

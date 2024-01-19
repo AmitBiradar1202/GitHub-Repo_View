@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>GitHub Repositories Viewer</h1>
+    </header>
+    <main>
+    <form action="/api/get" method="post">
+
+        <label for="username"><h3>GitHub Username</h3></label>
+    
+        <input type="text" id="username" name="username" placeholder="Enter GitHub username" >
+        <button type="submit">Get Repositories</button>
+    </form>
+    <h3><%= %></h3>    
+    </main>
+</body>
+</html>
